@@ -1,6 +1,8 @@
 # Pandollo
 
 [![license-img]](LICENSE)
+[![bitHound](https://img.shields.io/bithound/devDependencies/github/rexxars/sse-channel.svg)](https://github.com/lyndonoc/hexo-theme-pandollo/blob/master/package.json)
+
 
 > Clean and minimal theme for [Hexo](https://hexo.io/ko/index.html), inspired by [Panda Syntax theme](https://github.com/PandaTheme/Panda-Kit) and [Hexo Apollo theme](https://github.com/pinggod/hexo-theme-apollo).
 
@@ -56,4 +58,5 @@ favicon: path_to_favicon
 ```
 replace `path_to_favicon` with the path to a favicon file.
 
-[license-img]: https://img.shields.io/github/license/lyndonoc/hexo-theme-pandollo.svg
+[license-img]: https://img.shields.io/github/license/lyndonoc/hexo-theme-pandollo.svg?style=flat-square
+[devDependencies]: https://img.shields.io/lyndonoc/dev/devDependencies/github/rexxars/sse-channel.svg?style=flat-square
