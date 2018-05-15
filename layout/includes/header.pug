@@ -1,0 +1,13 @@
+header.main-header
+    h1.main-header__title.uplize
+        a(class='main-header__title__link', href=url_for())
+            != config.title
+    nav.main-header__nav
+        ul.main-nav
+            each value, key in theme.menu
+                li.main-nav__list
+                    - var re = /^(http|https):\/\/*/gi;
+                    - var tar = re.test(value) ? "_blank" : "_self"
+                    - var act = !re.test(value) && "/"+page.current_url === value
+                    a.main-nav__list__link(class={ active: act } href=url_for(value) target=tar)
+                        != key.toUpperCase()

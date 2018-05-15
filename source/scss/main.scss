@@ -1,0 +1,10 @@
+/* vendors */
+@import 'vendors/normalize';
+@import 'vendors/syntax';
+
+/* custom styles */
+@import '0_variables';
+@import '1_default';
+@import '2_header';
+@import '3_index';
+@import '4_archive';

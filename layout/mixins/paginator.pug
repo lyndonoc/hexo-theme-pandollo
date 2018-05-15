@@ -1,0 +1,21 @@
+mixin forList()
+    - var prev = page.prev_link
+    - var next = page.next_link
+    .pagination
+        if page.prev
+            a.pagination__link.pagination__prev(href=url_for(prev))
+                != __('prev')
+        if page.next
+            a.pagination__link.pagination__next(href=url_for(next))
+                != __('next')
+
+mixin forPost()
+    - var prev = page.prev ? page.prev.path : false;
+    - var next = page.next ? page.next.path : false;
+    .pagination
+        if prev
+            a.pagination__link.pagination__prev(href=url_for(prev))
+                != __('prev_post')
+        if next
+            a.pagination__link.pagination__next(href=url_for(next))
+                != __('next_post')

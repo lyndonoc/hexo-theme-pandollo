@@ -1,0 +1,30 @@
+{
+  "name": "hexo-theme-pandollo",
+  "version": "1.0.0",
+  "description": "Hexo theme inspired by panda syntax theme and hexo theme apollo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyndonoc/hexo-theme-pandollo"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "panda",
+    "apollo"
+  ],
+  "author": "Lyndon Ohhyung Chun <lyndonoc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pinggod/hexo-theme-pandollo/issues"
+  },
+  "homepage": "https://github.com/pinggod/hexo-theme-pandollo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+$metaData: #828282;
+
+/*
+    colours from panda theme kit
+    (https://github.com/PandaTheme/Panda-Kit)
+*/
+$pandaWhite: #E6E6E6;
+$pandaBlack: #2C2C30;
+$pandaGreen: #35FFDC;
+$pandaPink: #FF90D0;
+$pandaRed: #EC2864;
+$pandaOrange: #FFB86C;
+$pandaBlue: #7DC1FF;
+$pandaPurple: #B084EB;
+
+$pandaBlockBg: #292a2b;
+$pandaGrey: #e6e6e6;
+
+@mixin flex-box($justify-type, $align-type: center) {
+    align-items: $align-type;
+    display: flex;
+    justify-content: $justify-type;
+}

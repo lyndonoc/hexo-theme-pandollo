@@ -1,0 +1,130 @@
+.article {
+    border-top: 1px solid $metaData;
+    overflow: auto;
+    padding: 20px 0;
+    &:first-child {
+        border: none;
+    }
+    &.post {
+        padding-bottom: 0;
+    }
+    &__title {
+        color: $pandaBlue;
+        font-size: 20px;
+        margin-bottom: 20px;
+        &__link {
+            color: inherit;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                border-color: $pandaOrange;
+            }
+        }
+    }
+    &__tags {
+        display: flex;
+        margin-top: 10px;
+        &__link {
+            margin-left: 3px;
+            &:after {
+                content: ', ';
+            }
+            &:hover {
+                color: $pandaPink;
+            }
+        }
+    }
+    &__body {
+        line-height: 24px;
+        margin: 20px 0;
+        > * {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        a {
+            color: $pandaPink;
+            text-decoration: underline;
+        }
+        > h2, h3, h4, h5, h6 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        > blockquote {
+            background-color: $pandaGrey;
+            border-left: 5px solid $pandaRed;
+            color: $pandaBlack;
+            padding: 10px 15px;
+        }
+        > p {
+            > code.highlighter-rouge {
+                background-color: #F8F8F8;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        > ul {
+            > li {
+                margin: 5px 0;
+                &:before {
+                    content: '•';
+                    margin: 0 10px;
+                }
+                > a {
+                    display: inline-block;
+                }
+            }
+        }
+        > .highlight {
+            background-color: $pandaBlockBg !important;
+            border: 1px solid $metaData;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 16px;
+            overflow-y: auto;
+            > table {
+                padding: 5px 7px;
+                .line {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    &__link {
+        color: $pandaPink;
+        border-bottom: 1px solid transparent;
+        float: right;
+        &:hover {
+            border-color: $pandaRed;
+        }
+    }
+}
+.pagination {
+    overflow: hidden;
+    &__link {
+        background-color: $pandaRed;
+        border-bottom: 3px solid #90193E;
+        border-radius: 5px;
+        color: #fff;
+        margin: 4px 0;
+        padding: 2px 6px;
+        text-align: center;
+        text-shadow: 0px -2px #BF360C;
+        width: 70px;
+        &:active {
+            border-bottom: 1px solid #90193E;
+            margin-top: 6px;
+            text-shadow: none;
+            transform: translateY(2px);
+        }
+    }
+    &__prev {
+        float: left;
+    }
+    &__next {
+        float: right;
+    }
+}
+.comments {
+    border-bottom: 1px solid $metaData;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}

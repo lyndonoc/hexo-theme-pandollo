@@ -1,0 +1,28 @@
+.archive {
+    &__title {
+        margin-left: 10px;
+    }
+    &__list {
+        padding-left: 20px;
+        &__item {
+            @include flex-box(flex-start);
+            margin: 20px 0;
+            &__link {
+                border-bottom: 2px solid transparent;
+                color: $pandaBlue;
+                margin-left: 20px;
+                &:hover {
+                    border-color: $pandaOrange;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 700px) {
+        &__title {
+            margin-left: 20px;
+        }
+        &__list {
+            padding-left: 40px;
+        }
+    }
+}

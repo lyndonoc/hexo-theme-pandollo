@@ -1,0 +1,17 @@
+#theme settings
+menu:
+    Home: /
+    Archive: /archives/
+    LinkedIn: https://www.linkedin.com/in/username/
+    GitHub: https://github.com/username
+
+favicon: /images/favicon.png
+
+# syntax highlight
+syntax_highlight: darkula
+
+# disqus
+disqus: disqus
+
+# google-analytics:
+googleAnalytics: UA-00000000-0

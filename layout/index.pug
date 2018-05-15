@@ -1,0 +1,9 @@
+extends includes/layout
+
+block container
+    include mixins/post
+    +articles()
+
+block pagination
+    include mixins/paginator
+    +forList()

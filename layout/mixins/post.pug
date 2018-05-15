@@ -1,0 +1,64 @@
+mixin articlesByType()
+    section.archive
+        - var year = 0;
+        - var change = false;
+        if is_archive()
+            - page.posts.each(function (post) {
+                - var itemYear = date(post.date, 'YYYY') - 0;
+                - change = year !== itemYear;
+                - year = change ? itemYear : year;
+                    if change
+                        h3.archive__title.article__title!= year
+                    ul.archive__list
+                        li.archive__list__item
+                            span.archive__list__item__text.metadata
+                                != full_date(post.date, 'YYYY/MM/DD')
+                            a.archive__list__item__link(href=url_for(post.path) title=post.from)
+                                != post.title
+            - })
+        else if is_tag()
+            h3.archive__title.article__title Tag: #{page.tag}
+            - page.posts.each(function (post) {
+                ul.archive__list
+                    li.archive__list__item
+                        span.archive__list__item__text.metadata
+                            != full_date(post.date, 'YYYY/MM/DD')
+                        a.archive__list__item__link(href=url_for(post.path) title=post.from)
+                            != post.title
+            - })
+
+mixin articles()
+    - page.posts.each(function (post) {
+        section.article
+            h3.article__title
+                a.article__title__link(href= url_for(post.path))
+                    != post.title
+            .article__date.metadata
+                +articleInfo(post)
+            .article__body
+                != post.excerpt
+            a.article__link(href= url_for(post.path))
+                != __('read more ...')
+    - })
+
+mixin articleInfo(post)
+    .post-info
+        != full_date(post.date, 'YYYY/MM/DD')
+        if post.from && (is_home() || is_post())
+            a.post-from(href=post.from target="_blank" title=post.from)!= __('translated')
+
+mixin article(post)
+    article.article.post
+        h3.article__title
+            != post.title
+        .article__date.metadata
+            +articleInfo(post)
+        .article__tags.metadata
+            | Tags:
+            |
+            - page.tags.each(function(tag) {
+                a.article__tags__link.metadata(href=url_for(tag.path))
+                    != tag.name
+            - })
+        .article__body
+            != post.content

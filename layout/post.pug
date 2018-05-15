@@ -1,0 +1,16 @@
+extends includes/layout
+
+block site_title
+    != config.title + " | " + page.title
+
+block description
+    meta(name="description", content=page.excerpt)
+
+block container
+    include mixins/post
+    +article(page)
+    include includes/disqus
+
+block pagination
+    include mixins/paginator
+    +forPost()
