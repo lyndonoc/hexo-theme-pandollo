@@ -1,8 +1,9 @@
 # Pandollo
 
-[![license-img]](LICENSE)
-[![bitHound](https://img.shields.io/bithound/devDependencies/github/rexxars/sse-channel.svg)](https://github.com/lyndonoc/hexo-theme-pandollo/blob/master/package.json)
+[![license-img](https://img.shields.io/github/license/lyndonoc/hexo-theme-pandollo.svg?style=flat-square)](https://raw.githubusercontent.com/lyndonoc/hexo-theme-pandollo/master/LICENSE)
+[![devDependency Status"](https://img.shields.io/david/dev/lyndonoc/hexo-theme-pandollo.svg?style=flat-square)](https://david-dm.org/lyndonoc/hexo-theme-pandollo?type=dev)
 
+![hexo-theme-apollo](https://github.com/lyndonoc/hexo-theme-pandollo/raw/master/source/screenshots/pandollo.png)
 
 > Clean and minimal theme for [Hexo](https://hexo.io/ko/index.html), inspired by [Panda Syntax theme](https://github.com/PandaTheme/Panda-Kit) and [Hexo Apollo theme](https://github.com/pinggod/hexo-theme-apollo).
 
@@ -57,6 +58,3 @@ replace `darkula` with your choice of syntax highlighting within a post.
 favicon: path_to_favicon
 ```
 replace `path_to_favicon` with the path to a favicon file.
-
-[license-img]: https://img.shields.io/github/license/lyndonoc/hexo-theme-pandollo.svg?style=flat-square
-[devDependencies]: https://img.shields.io/lyndonoc/dev/devDependencies/github/rexxars/sse-channel.svg?style=flat-square
